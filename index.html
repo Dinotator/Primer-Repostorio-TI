@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +23,15 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
-	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/form_layouts.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -401,19 +404,17 @@
 				<div class="card card-sidebar-mobile">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 
-						<!-- Main -->
-					
-						<!-- /main -->
+						
 
 						<!-- Forms -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Forms</div> <i class="icon-menu" title="Forms"></i></li>
 						
-						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
-							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Formularios</span></a>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Formulario Alumnos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								
-									<li class="nav-item"><a href="form_layout_horizontal_agregar_alumnos.html" class="nav-link active">Agregar Alumnos</a></li>
-									<li class="nav-item"><a href="form_layout_horizontal_editar_alumnos.html" class="nav-link active">Editar Alumnos</a></li>
+							
+								<li class="nav-item"><a href="form_layout_horizontal_agregar_alumnos.html" class="nav-link">Agregar Alumnos</a></li>
+								<li class="nav-item"><a href="form_layout_horizontal_editar_alumnos.html" class="nav-link active">Editar Alumnos</a></li>
 								<li class="nav-item"><a href="datatable_basic.html" class="nav-link active">Listado de alumnos</a></li>
 								<li class="nav-item"><a href="form_layout_horizontal_styled.html" class="nav-link disabled">Custom styles <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
 							</ul>
@@ -437,22 +438,21 @@
 							
 							</ul>
 						</li>
+						
 						<!-- /forms -->
-						
-					
-						<!-- Data visualization -->
-						
+
+
 						
 
 					</ul>
 				</div>
-			
+				<!-- /main navigation -->
 
 			</div>
-			
+			<!-- /sidebar content -->
 			
 		</div>
-		
+		<!-- /main sidebar -->
 
 
 		<!-- Main content -->
@@ -462,7 +462,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form Layouts</span> - Horizontal</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Dashboard</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -479,8 +479,7 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<a href="form_layout_horizontal_editar_alumnos.html" class="breadcrumb-item">Editar Alumnos</a>
-							<span class="breadcrumb-item active">Editar Alumnos</span>
+							<span class="breadcrumb-item active">Dashboard</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -511,140 +510,155 @@
 					</div>
 				</div>
 			</div>
-	
-                                    
-                                    
-                                <!-- /forms -->
+			<!-- /page header -->
 
-                <!-- 2 columns form -->
-                <div class="card">
-                    <div class="card-header header-elements-inline">
-                        <h5 class="card-title">Edite los datos</h5>
-                        <div class="header-elements">
-                            <div class="list-icons">
-                                <a class="list-icons-item" data-action="collapse"></a>
-                                <a class="list-icons-item" data-action="reload"></a>
-                                <a class="list-icons-item" data-action="remove"></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="card-body">
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles Personales</legend>
+			<!-- Content area -->
+			<div class="content">
 
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Edite la matrícula:</label>
-                                            <div class="col-lg-9">
-                                                <input type="number" class="form-control" placeholder="1930351">
-                                            </div>
-                                        </div>
+				<!-- Main charts -->
+				<div class="row">
+					<div class="col-xl-7">
 
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Edite el nombre:</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" class="form-control" placeholder="Dino Tonatiuh">
-                                            </div>
-                                        </div>
+						<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Traffic sources</h6>
+								<div class="header-elements">
+									<div class="form-check form-check-right form-check-switchery form-check-switchery-sm">
+										<label class="form-check-label">
+											Live update:
+											<input type="checkbox" class="form-input-switchery" checked data-fouc>
+										</label>
+									</div>
+								</div>
+							</div>
 
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Edite el apellido:</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" class="form-control" placeholder="Gutiérrez Martínez">
-                                            </div>
-										</div>
-										
-										<div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Cambiar Carrera:</label>
-                                            <div class="col-lg-9">
-                                                <select class="form-control form-control-select2 select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
-                                                    <optgroup label="Carreras">
-                                                        <option value="1">Licenciatura en Administración Y Gestión Empresarial</option>
-                                                        <option value="2">Ingeniería en Tecnologías de la Información</option>
-                                                        <option value="3">Ingeniería en Mecatrónica</option>
-                                                        <option value="4">Ingeniería en Tecnologías de Manufactura</option>
-                                                        <option value="5">Ingeniería en Sistemas Automotrices</option>
-                                                    </optgroup>
-                                                </select>
-                                        </div>
-                                    </div>
-
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Cambiar Cuatrimestre:</label>
-                                            <div class="col-lg-9">
-                                                <select class="form-control form-control-select2 select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
-                                                    <optgroup label="Carreras">
-                                                        <option value="1">Primer Cuatrimestre</option>
-                                                        <option value="2">Segundo Cuatrimestre</option>
-                                                        <option value="3">Tercer Cuatrimestre</option>
-                                                        <option value="4">Cuarto Cuatrimestre</option>
-                                                        <option value="5">Quinto Cuatrimestre</option>
-                                                        <option value="6">Sexto Cuatrimestre</option>
-                                                        <option value="7">Séptimo Cuatrimestre</option>
-                                                        <option value="8">Octavo Cuatrimestre</option>
-                                                        <option value="9">Noveno Cuatrimestre</option>
-                                                    </optgroup>
-                                                </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Cambiar la Imagen Personal:</label>
-                                            <div class="col-lg-9">
-                                                <div class="uniform-uploader"><input type="file" class="form-input-styled" data-fouc="">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                       
-                                    </fieldset>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Contacto</legend>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Editar Correo Electrónico:</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" placeholder="1930351@upv.edu.mx" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Editar Teléfono:</label>
-                                            <div class="col-lg-9">
-                                                <input type="number" placeholder="+52-834-255-41-86" class="form-control">
-                                            </div>
-										</div>
-
-										<div class="form-group row">
-												<label class="col-lg-3 col-form-label">Editar Dirección:</label>
-												<div class="col-lg-9">
-													<input type="text" placeholder="Dirección donde vives" class="form-control">
-												</div>
+							<div class="card-body py-0">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-teal text-teal rounded-round border-2 btn-icon mr-3">
+												<i class="icon-plus3"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">New visitors</div>
+												<span class="text-muted">2,349 avg</span>
 											</div>
-                                                       
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Editar Descripción de la casa:</label>
-                                            <div class="col-lg-9">
-                                                <textarea rows="10" cols="10" class="form-control" placeholder="Ingrese su descripción aquí"></textarea>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-visitors"></div>
+									</div>
 
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-primary">Enviar <i class="icon-paperplane ml-2"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-warning-400 text-warning-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-watch2"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">New sessions</div>
+												<span class="text-muted">08:20 avg</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-sessions"></div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-people"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Total online</div>
+												<span class="text-muted"><span class="badge badge-mark border-success mr-2"></span> 5,378 avg</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="total-online"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="chart position-relative" id="traffic-sources"></div>
+						</div>
+						<!-- /traffic sources -->
+
+					</div>
+
+					<div class="col-xl-5">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Sales statistics</h6>
+								<div class="header-elements">
+									<select class="form-control" id="select_date" data-fouc>
+										<option value="val1">June, 29 - July, 5</option>
+										<option value="val2">June, 22 - June 28</option>
+										<option value="val3" selected>June, 15 - June, 21</option>
+										<option value="val4">June, 8 - June, 14</option>
+									</select>
+			                	</div>
+							</div>
+
+							<div class="card-body py-0">
+								<div class="row text-center">
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">5,689</h5>
+											<span class="text-muted font-size-sm">new orders</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">32,568</h5>
+											<span class="text-muted font-size-sm">this month</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">$23,464</h5>
+											<span class="text-muted font-size-sm">expected profit</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="chart mb-2" id="app_sales"></div>
+							<div class="chart" id="monthly-sales-stats"></div>
+						</div>
+						<!-- /sales stats -->
+
+					</div>
+				</div>
+				<!-- /main charts -->
+
+
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-xl-8">
+
+					
+
+							</div>
+						</div>
+						<!-- /quick stats boxes -->
+
+					</div>
+				</div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+		
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
 </body>
 </html>

@@ -126,7 +126,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Listado de Alumnos</span></h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Listado de Materias</span></h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -171,6 +171,124 @@
 			</div>
 			<!-- /page header -->
 
+			<!--Modal-->
+			<div class="content">
+				<div style="text-align: center">
+			<a href="#ventana1" style="text-align: right" class="btn btn-primary btn-lg" data-toggle="modal" >Agregar Materias</a>
+				</div>
+			<!--Modal Ingresar-->
+			
+			<div class="modal fade" id="ventana1" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<!--Para salir de la ventana emergente presione ESC-->
+					<div class="modal-content">
+						
+							<div class="card">
+									<div class="card-header header-elements-inline">
+										<h5 class="card-title">Registro de Materias</h5>
+									</div>
+				
+									<div class="card-body">
+										<form action="#">
+											<div class="row">
+												<div class="col-md-10">
+													<fieldset>
+														<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Materias</legend>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Clave de Materia</label>
+															<div class="col-lg-9">
+																<input type="number" class="form-control">
+															</div>
+														</div>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Cuatrimestre:</label>
+															<div class="col-lg-9">
+																<input type="text" class="form-control">
+															</div>
+														</div>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Nombre de la materia:</label>
+															<div class="col-lg-9">
+																<input type="text" class="form-control">
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+				
+											<div class="text-right">
+												<button type="submit" class="btn btn-primary">Enviar<i class="icon-paperplane ml-2"></i></button>
+											</div>
+										</form>
+									</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--/Modal-->
+
+
+			<!--Modal Editar-->
+			<div class="content">
+				<div style="text-align: center">
+			<a href="#ventana2" style="text-align: right" class="btn btn-primary btn-lg" data-toggle="modal" >Editar Materias</a>
+				</div>
+			
+			<div class="modal fade" id="ventana2" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					
+					<div class="modal-content">
+						
+							<div class="card">
+									<div class="card-header header-elements-inline">
+										<h5 class="card-title">Edición de Materias</h5>
+									</div>
+				
+									<div class="card-body">
+										<form action="#">
+											<div class="row">
+												<div class="col-md-10">
+													<fieldset>
+														<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Materias</legend>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Clave de Materia</label>
+															<div class="col-lg-9">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</div>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Cuatrimestre:</label>
+															<div class="col-lg-9">
+																<input type="text" class="form-control" placeholder="Primer Cuatrimestre">
+															</div>
+														</div>
+				
+														<div class="form-group row">
+															<label class="col-lg-3 col-form-label">Nombre de la materia:</label>
+															<div class="col-lg-9">
+																<input type="text" class="form-control" placeholder="Álgebra Líneal">
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+				
+											<div class="text-right">
+												<button type="submit" class="btn btn-primary">Enviar<i class="icon-paperplane ml-2"></i></button>
+											</div>
+										</form>
+									</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--/Modal Editar-->
+
 
 			<!-- Content area -->
 			<div class="content">
@@ -193,143 +311,69 @@
 					<table class="table datatable-basic">
 						<thead>
 							<tr>
-								<th>Matrícula</th>
-								<th>Nombre/s</th>
-								<th>Apellidos</th>
-								<th>Carrera</th>
+								<th>Clave de Materia</th>
 								<th>Cuatrimestre</th>
-								<th>Correo Electrónico</th>
-								<th>Teléfono</th>
-								<th>Dirección</th>
-								
+								<th>Nombre de la materia</th>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
 							</tr>
 						</thead>
 						<tbody>
 
 							<tr>
-								<td>1930351</td>
-								<td>Dino Tonatiuh</td>
-								<td>Gutiérrez Martínez</td>
-								<td>ITI</td>
+								<td>1</td>
 								<td>Primer Cuatrimestre</td>
-								<td>1930351@upv.edu.mx</td>
-								<td>+52 834-255-41-86</td>
-								<td>Fracc. Las Flores</td>
-								
+								<td>Álgebra Líneal</td>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
+
 										</div>
 									</div>
 								</td>
 							</tr>
 
 							<tr>
-								<td>1930841</td>
-								<td>Benito Camela</td>
-								<td>López Flores</td>
-								<td>Pymes</td>
+								<td>2</td>
 								<td>Cuarto Cuatrimestre</td>
-								<td>1930841@upv.edu.mx</td>
-								<td>+52 834-231-26-22</td>
-								<td>Fracc. La Moderna</td>
-									
+								<td>POO</td>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
+
 										</div>
 									</div>
 								</td>
 							</tr>
 
 							<tr>
-								<td>1930666</td>
-								<td>Onid Huitanot</td>
-								<td>Zerréitug Zenítram</td>
-								<td>ITI</td>
-								<td>Sexto Cuatrimestre</td>
-								<td>1930666@upv.edu.mx</td>
-								<td>+52 834-864-12-55</td>
-								<td>Fracc. Las Flores</td>
-										
+								<td>3</td>
+								<td>Noveno Cuatrimestre</td>
+								<td>Laravel</td>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
+
 										</div>
 									</div>
 								</td>
 							</tr>
 
 		    				<tr>
-								<td>1930315</td>
-								<td>Diana Metzli</td>
-								<td>Gutiérrez Martínez</td>
-								<td>ITM</td>
-								<td>Primer Cuatrimestre</td>
-								<td>1930315@upv.edu.mx</td>
-								<td>+52 834-512-24-75</td>
-								<td>Fracc. Las Flores</td>
-											
+								<td>4</td>
+								<td>Sexto Cuatrimestre</td>
+								<td>Cálculo Integral</td>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
+
 										</div>
 									</div>
 								</td>
 							</tr>
 
 							<tr>
-								<td>193001</td>
-								<td>Roland</td>
-								<td>Perez García</td>
-								<td>ITM</td>
-								<td>Primer Cuatrimestre</td>
-								<td>1930001@upv.edu.mx</td>
-								<td>+52 834-214-46-92</td>
-								<td>New Heaven</td>
-												
+								<td>5</td>
+								<td>Quinto Cuatrimestre</td>
+								<td>Armamiento de churro 5</td>
+								<td> <button name="button" class="btn btn-danger">Elminar Materia</button></td>
+
 										</div>
 									</div>
 								</td>
 							</tr>
 
-							<tr>
-								<td>1930003</td>
-								<td>Maya</td>
-								<td>Hodum Satford</td>
-								<td>Pymes</td>
-								<td>Tercer Cuatrimestre</td>
-								<td>1930003@upv.edu.mx</td>
-								<td>+52 834-235-24-52</td>
-								<td>Athenas</td>
-											
-										</div>
-									</div>
-								</td>
-							</tr>
-	
-							<tr>
-						    	<td>1930300</td>
-	 						    <td>Scooter</td>
-								<td>Hodunk Rebirth</td>
-								<td>ISA</td>
-								<td>Tercer Cuatrimestre</td>
-								<td>1930300@upv.edu.mx</td>
-								<td>+52 834-512-72-34</td>
-								<td>Old Heaven</td>
-												
-										</div>
-									</div>
-								</td>
-							</tr>
-	
-							<tr>
-								<td>1930392</td>
-								<td>Gaige</td>
-								<td>Tesla Gonzalez</td>
-								<td>IM</td>
-								<td>segundo Cuatrimestre</td>
-								<td>1930392@upv.edu.mx</td>
-								<td>+52 834-623-21-39</td>
-								<td>Arid Badlands</td>
-										
-										</div>
-									</div>
-								</td>
-							</tr>
-
-										
-														
-
-											
 
 		</div>
 		<!-- /main content -->
